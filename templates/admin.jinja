@@ -1,0 +1,21 @@
+{% extends "_main.jinja" %}
+
+{% block main %}
+    <form method="POST">
+        {{ form.csrf_token }}
+        <div class="form-floating">
+            {{ form.title(class="form-control mb-3", placeholder="Title", id="floatingInput") }}
+            {{ form.title.label }}
+        </div>
+
+        <div class="form-floating">
+            {{ form.content}}
+        </div>
+        <input type="submit" value="save" class="btn btn-primary">
+        
+    </form>
+
+    <script>
+        const simplemde = new SimpleMDE()
+    </script>
+{% endblock %}

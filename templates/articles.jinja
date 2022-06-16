@@ -1,0 +1,10 @@
+{% extends "_main.jinja" %}
+
+{% block main %}
+    {% for i in articles: %}
+    <div class="border">
+        <h3 class="text-primary"> <a href="{{ url_for('get_article', id = i['id']) }}">{{ i["title"] }}</a></h3>
+        <p>{{ i["content"] | truncate(100) }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

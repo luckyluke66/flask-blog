@@ -1,0 +1,16 @@
+body {
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
